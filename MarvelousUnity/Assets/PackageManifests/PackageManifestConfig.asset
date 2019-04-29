@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   packageSourcePaths:
   - Assets/Marvelous
-  packageDestinationPath: ../
+  packageDestinationPath: ../Source
   packageName: com.mambojambostudios.marvelous
   displayName: Marvelous
   packageVersion: 1.0.0
