@@ -3,38 +3,205 @@ using System.Collections.Generic;
 
 namespace Marvelous
 {
-    public static class IObservableExtensions
+    public static partial class Marvelous
     {
+        /// <summary>
+        /// Merges two observables into one. It uses createCombinedModel to create what is returned on every OnNext.
+        /// </summary>
+        /// <param name="observable1">IObservable to be merged.</param>
+        /// <param name="observable2">IObservable to be merged.</param>
+        /// <param name="createCombinedModel">Used to merge and create the observable value of the new IObservable.</param>
+        /// <param name="initialValue1">Initial value of observerable1.</param>
+        /// <param name="initialValue2">Initial value of observerable2.</param>
+        /// <typeparam name="T1">The type of the first IObservable.</typeparam>
+        /// <typeparam name="T2">The type of the second IObservable.</typeparam>
+        /// <typeparam name="M">Type of the new merged IObservable.</typeparam>
+        /// <returns>A new IObservable of type M combining the IObservables sent in.</returns>
         public static IObservable<M> MergeObservables<T1, T2, M>(
-            this IObservable<T1> observable1, IObservable<T2> observable2,
+            IObservable<T1> observable1, IObservable<T2> observable2,
             Func<T1, T2, M> createCombinedModel,
             T1 initialValue1 = default(T1), T2 initialValue2 = default(T2))
         {
             return new MergeObservables<T1, T2, M>(observable1, observable2, createCombinedModel, initialValue1, initialValue2);
         }
 
+        /// <summary>
+        /// Merges three observables into one. It uses createCombinedModel to create what is returned on every OnNext.
+        /// </summary>
+        /// <param name="observable1">IObservable to be merged.</param>
+        /// <param name="observable2">IObservable to be merged.</param>
+        /// <param name="observable3">IObservable to be merged.</param>
+        /// <param name="createCombinedModel">Used to merge and create the observable value of the new IObservable.</param>
+        /// <param name="initialValue1">Initial value of observerable1.</param>
+        /// <param name="initialValue2">Initial value of observerable2.</param>
+        /// <param name="initialValue3">Initial value of observerable3.</param>
+        /// <typeparam name="T1">The type of the first IObservable.</typeparam>
+        /// <typeparam name="T2">The type of the second IObservable.</typeparam>
+        /// <typeparam name="T3">The type of the third IObservable.</typeparam>
+        /// <typeparam name="M">Type of the new merged IObservable.</typeparam>
+        /// <returns>A new IObservable of type M combining the IObservables sent in.</returns>
         public static IObservable<M> MergeObservables<T1, T2, T3, M>(
-            this IObservable<T1> observable1, IObservable<T2> observable2, IObservable<T3> observable3,
+            IObservable<T1> observable1, IObservable<T2> observable2, IObservable<T3> observable3,
             Func<T1, T2, T3, M> createCombinedModel,
             T1 initialValue1 = default(T1), T2 initialValue2 = default(T2), T3 initialValue3 = default(T3))
         {
             return new MergeObservables<T1, T2, T3, M>(observable1, observable2, observable3, createCombinedModel, initialValue1, initialValue2, initialValue3);
         }
 
+        /// <summary>
+        /// Merges four observables into one. It uses createCombinedModel to create what is returned on every OnNext.
+        /// </summary>
+        /// <param name="observable1">IObservable to be merged.</param>
+        /// <param name="observable2">IObservable to be merged.</param>
+        /// <param name="observable3">IObservable to be merged.</param>
+        /// <param name="observable4">IObservable to be merged.</param>
+        /// <param name="createCombinedModel">Used to merge and create the observable value of the new IObservable.</param>
+        /// <param name="initialValue1">Initial value of observerable1.</param>
+        /// <param name="initialValue2">Initial value of observerable2.</param>
+        /// <param name="initialValue3">Initial value of observerable3.</param>
+        /// <param name="initialValue4">Initial value of observerable4.</param>
+        /// <typeparam name="T1">The type of the first IObservable.</typeparam>
+        /// <typeparam name="T2">The type of the second IObservable.</typeparam>
+        /// <typeparam name="T3">The type of the third IObservable.</typeparam>
+        /// <typeparam name="T4">The type of the fourth IObservable.</typeparam>
+        /// <typeparam name="M">Type of the new merged IObservable.</typeparam>
+        /// <returns>A new IObservable of type M combining the IObservables sent in.</returns>
         public static IObservable<M> MergeObservables<T1, T2, T3, T4, M>(
-            this IObservable<T1> observable1, IObservable<T2> observable2, IObservable<T3> observable3, IObservable<T4> observable4,
+            IObservable<T1> observable1, IObservable<T2> observable2, IObservable<T3> observable3, IObservable<T4> observable4,
             Func<T1, T2, T3, T4, M> createCombinedModel,
             T1 initialValue1 = default(T1), T2 initialValue2 = default(T2), T3 initialValue3 = default(T3), T4 initialValue4 = default(T4))
         {
             return new MergeObservables<T1, T2, T3, T4, M>(observable1, observable2, observable3, observable4, createCombinedModel, initialValue1, initialValue2, initialValue3, initialValue4);
         }
 
+        /// <summary>
+        /// Merges five observables into one. It uses createCombinedModel to create what is returned on every OnNext.
+        /// </summary>
+        /// <param name="observable1">IObservable to be merged.</param>
+        /// <param name="observable2">IObservable to be merged.</param>
+        /// <param name="observable3">IObservable to be merged.</param>
+        /// <param name="observable4">IObservable to be merged.</param>
+        /// <param name="observable5">IObservable to be merged.</param>
+        /// <param name="createCombinedModel">Used to merge and create the observable value of the new IObservable.</param>
+        /// <param name="initialValue1">Initial value of observerable1.</param>
+        /// <param name="initialValue2">Initial value of observerable2.</param>
+        /// <param name="initialValue3">Initial value of observerable3.</param>
+        /// <param name="initialValue4">Initial value of observerable4.</param>
+        /// <param name="initialValue5">Initial value of observerable5.</param>
+        /// <typeparam name="T1">The type of the first IObservable.</typeparam>
+        /// <typeparam name="T2">The type of the second IObservable.</typeparam>
+        /// <typeparam name="T3">The type of the third IObservable.</typeparam>
+        /// <typeparam name="T4">The type of the fourth IObservable.</typeparam>
+        /// <typeparam name="T5">The type of the fifth IObservable.</typeparam>
+        /// <typeparam name="M">Type of the new merged IObservable.</typeparam>
+        /// <returns>A new IObservable of type M combining the IObservables sent in.</returns>
+        public static IObservable<M> MergeObservables<T1, T2, T3, T4, T5, M>(
+            IObservable<T1> observable1, IObservable<T2> observable2, IObservable<T3> observable3, IObservable<T4> observable4, IObservable<T5> observable5,
+            Func<T1, T2, T3, T4, T5, M> createCombinedModel,
+            T1 initialValue1 = default(T1), T2 initialValue2 = default(T2), T3 initialValue3 = default(T3), T4 initialValue4 = default(T4), T5 initialValue5 = default(T5))
+        {
+            return new MergeObservables<T1, T2, T3, T4, T5, M>(observable1, observable2, observable3, observable4, observable5, createCombinedModel, initialValue1, initialValue2, initialValue3, initialValue4, initialValue5);
+        }
+    }
+
+    public static partial class Extensions
+    {
+        /// <summary>
+        /// Merges 2 observables into one. It uses createCombinedModel to create what is returned on every OnNext.
+        /// </summary>
+        /// <param name="observable1">IObservable to be merged.</param>
+        /// <param name="observable2">IObservable to be merged.</param>
+        /// <param name="createCombinedModel">Used to merge and create the observable value of the new IObservable.</param>
+        /// <param name="initialValue1">Initial value of observerable1.</param>
+        /// <param name="initialValue2">Initial value of observerable2.</param>
+        /// <typeparam name="T1">The type of the first IObservable.</typeparam>
+        /// <typeparam name="T2">The type of the second IObservable.</typeparam>
+        /// <typeparam name="M">Type of the new merged IObservable.</typeparam>
+        /// <returns>A new IObservable of type M combining the IObservables sent in.</returns>
+        public static IObservable<M> MergeObservables<T1, T2, M>(
+            this IObservable<T1> observable1, IObservable<T2> observable2,
+            Func<T1, T2, M> createCombinedModel,
+            T1 initialValue1 = default(T1), T2 initialValue2 = default(T2))
+        {
+            return Marvelous.MergeObservables<T1, T2, M>(observable1, observable2, createCombinedModel, initialValue1, initialValue2);
+        }
+
+        /// <summary>
+        /// Merges three observables into one. It uses createCombinedModel to create what is returned on every OnNext.
+        /// </summary>
+        /// <param name="observable1">IObservable to be merged.</param>
+        /// <param name="observable2">IObservable to be merged.</param>
+        /// <param name="observable3">IObservable to be merged.</param>
+        /// <param name="createCombinedModel">Used to merge and create the observable value of the new IObservable.</param>
+        /// <param name="initialValue1">Initial value of observerable1.</param>
+        /// <param name="initialValue2">Initial value of observerable2.</param>
+        /// <param name="initialValue3">Initial value of observerable3.</param>
+        /// <typeparam name="T1">The type of the first IObservable.</typeparam>
+        /// <typeparam name="T2">The type of the second IObservable.</typeparam>
+        /// <typeparam name="T3">The type of the third IObservable.</typeparam>
+        /// <typeparam name="M">Type of the new merged IObservable.</typeparam>
+        /// <returns>A new IObservable of type M combining the IObservables sent in.</returns>
+        public static IObservable<M> MergeObservables<T1, T2, T3, M>(
+            this IObservable<T1> observable1, IObservable<T2> observable2, IObservable<T3> observable3,
+            Func<T1, T2, T3, M> createCombinedModel,
+            T1 initialValue1 = default(T1), T2 initialValue2 = default(T2), T3 initialValue3 = default(T3))
+        {
+            return Marvelous.MergeObservables<T1, T2, T3, M>(observable1, observable2, observable3, createCombinedModel, initialValue1, initialValue2, initialValue3);
+        }
+
+        /// <summary>
+        /// Merges four observables into one. It uses createCombinedModel to create what is returned on every OnNext.
+        /// </summary>
+        /// <param name="observable1">IObservable to be merged.</param>
+        /// <param name="observable2">IObservable to be merged.</param>
+        /// <param name="observable3">IObservable to be merged.</param>
+        /// <param name="observable4">IObservable to be merged.</param>
+        /// <param name="createCombinedModel">Used to merge and create the observable value of the new IObservable.</param>
+        /// <param name="initialValue1">Initial value of observerable1.</param>
+        /// <param name="initialValue2">Initial value of observerable2.</param>
+        /// <param name="initialValue3">Initial value of observerable3.</param>
+        /// <param name="initialValue4">Initial value of observerable4.</param>
+        /// <typeparam name="T1">The type of the first IObservable.</typeparam>
+        /// <typeparam name="T2">The type of the second IObservable.</typeparam>
+        /// <typeparam name="T3">The type of the third IObservable.</typeparam>
+        /// <typeparam name="T4">The type of the fourth IObservable.</typeparam>
+        /// <typeparam name="M">Type of the new merged IObservable.</typeparam>
+        /// <returns>A new IObservable of type M combining the IObservables sent in.</returns>
+        public static IObservable<M> MergeObservables<T1, T2, T3, T4, M>(
+            this IObservable<T1> observable1, IObservable<T2> observable2, IObservable<T3> observable3, IObservable<T4> observable4,
+            Func<T1, T2, T3, T4, M> createCombinedModel,
+            T1 initialValue1 = default(T1), T2 initialValue2 = default(T2), T3 initialValue3 = default(T3), T4 initialValue4 = default(T4))
+        {
+            return Marvelous.MergeObservables<T1, T2, T3, T4, M>(observable1, observable2, observable3, observable4, createCombinedModel, initialValue1, initialValue2, initialValue3, initialValue4);
+        }
+
+        /// <summary>
+        /// Merges five observables into one. It uses createCombinedModel to create what is returned on every OnNext.
+        /// </summary>
+        /// <param name="observable1">IObservable to be merged.</param>
+        /// <param name="observable2">IObservable to be merged.</param>
+        /// <param name="observable3">IObservable to be merged.</param>
+        /// <param name="observable4">IObservable to be merged.</param>
+        /// <param name="observable5">IObservable to be merged.</param>
+        /// <param name="createCombinedModel">Used to merge and create the observable value of the new IObservable.</param>
+        /// <param name="initialValue1">Initial value of observerable1.</param>
+        /// <param name="initialValue2">Initial value of observerable2.</param>
+        /// <param name="initialValue3">Initial value of observerable3.</param>
+        /// <param name="initialValue4">Initial value of observerable4.</param>
+        /// <param name="initialValue5">Initial value of observerable5.</param>
+        /// <typeparam name="T1">The type of the first IObservable.</typeparam>
+        /// <typeparam name="T2">The type of the second IObservable.</typeparam>
+        /// <typeparam name="T3">The type of the third IObservable.</typeparam>
+        /// <typeparam name="T4">The type of the fourth IObservable.</typeparam>
+        /// <typeparam name="T5">The type of the fifth IObservable.</typeparam>
+        /// <typeparam name="M">Type of the new merged IObservable.</typeparam>
+        /// <returns>A new IObservable of type M combining the IObservables sent in.</returns>
         public static IObservable<M> MergeObservables<T1, T2, T3, T4, T5, M>(
             this IObservable<T1> observable1, IObservable<T2> observable2, IObservable<T3> observable3, IObservable<T4> observable4, IObservable<T5> observable5,
             Func<T1, T2, T3, T4, T5, M> createCombinedModel,
             T1 initialValue1 = default(T1), T2 initialValue2 = default(T2), T3 initialValue3 = default(T3), T4 initialValue4 = default(T4), T5 initialValue5 = default(T5))
         {
-            return new MergeObservables<T1, T2, T3, T4, T5, M>(observable1, observable2, observable3, observable4, observable5, createCombinedModel, initialValue1, initialValue2, initialValue3, initialValue4, initialValue5);
+            return Marvelous.MergeObservables<T1, T2, T3, T4, T5, M>(observable1, observable2, observable3, observable4, observable5, createCombinedModel, initialValue1, initialValue2, initialValue3, initialValue4, initialValue5);
         }
     }
 
@@ -432,3 +599,4 @@ namespace Marvelous
     }
 
 }
+
