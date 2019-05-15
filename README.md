@@ -1,5 +1,5 @@
 # Marvelous
-💄 An extensions library for Unity
+💄 Utility library and extensions for Unity
 
 ## Installation 
 ```
