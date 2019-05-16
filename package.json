@@ -5,7 +5,7 @@
     "unity": "2018.1",
     "description": "💄 Utility library and extensions for Unity",
     "scripts": {
-        "publish:pkg": "npm publish --dry-run ./MarvelousUnity/Assets/Marvelous",
+        "publish:pkg": "npm publish ./MarvelousUnity/Assets/Marvelous",
         "prepublish:pkg": "copyfiles README.md package.json ./MarvelousUnity/Assets/Marvelous",
         "postpublish:pkg": "rimraf ./MarvelousUnity/Assets/Marvelous/README.md ./MarvelousUnity/Assets/Marvelous/package.json"
     },
