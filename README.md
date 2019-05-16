@@ -16,7 +16,7 @@ Marvelous can be installed through npm's registry. Add the following to your `ma
     ],
     "dependencies": {
         ...
-        "com.mambojambostudios.marvelous" : "1.0.0",
+        "com.mambojambostudios.marvelous" : "1.0.2",
         ...
     }
 }
