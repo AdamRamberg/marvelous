@@ -14,3 +14,6 @@ trim_trailing_whitespace = false
 [*.json]
 trim_trailing_whitespace = false
 insert_final_newline = false
+
+[*.js]
+indent_size = 2

@@ -22,5 +22,9 @@
     "devDependencies": {
         "copyfiles": "^2.1.0",
         "rimraf": "^2.6.3"
+    },
+    "dependencies": {
+        "fs": "0.0.1-security",
+        "xml-js": "^1.6.11"
     }
 }

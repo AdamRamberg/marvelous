@@ -1,5 +1,8 @@
-# Marvelous
-💄 Utility library and extensions for Unity
+---
+id: getting-started
+title: Getting Started
+sidebar_label: Getting Started
+---
 
 # Installation 
 Marvelous can be installed via NPM. Add the following to your `manifest.json`:
