@@ -41,3 +41,6 @@ sysinfo.txt
 
 # Node
 node_modules
+
+# Website build folder
+/website/build

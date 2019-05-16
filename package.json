@@ -1,7 +1,7 @@
 {
     "name": "com.mambojambostudios.marvelous",
     "displayName": "Marvelous",
-    "version": "1.0.2",
+    "version": "1.0.4",
     "unity": "2018.1",
     "description": "💄 Utility library and extensions for Unity",
     "scripts": {
@@ -18,7 +18,7 @@
     "bugs": {
         "url": "https://github.com/AdamRamberg/marvelous/issues"
     },
-    "homepage": "https://github.com/AdamRamberg/marvelous#readme",
+    "homepage": "https://adamramberg.github.io/marvelous",
     "devDependencies": {
         "copyfiles": "^2.1.0",
         "rimraf": "^2.6.3"

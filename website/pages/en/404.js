@@ -3,7 +3,7 @@ const siteConfig = require(`${process.cwd()}/siteConfig.js`);
 
 class ErrorPage extends React.Component {
   render() {
-    const {siteConfig} = this.props;
+    const {config} = this.props;
 
     return (
       <div className="error-page">
@@ -11,7 +11,7 @@ class ErrorPage extends React.Component {
           <div className=" error-message-container container">
             <span>404 </span>
             <p>Page Not Found.</p>
-            <a href={siteConfig.baseUrl}>Return to the front page</a>
+            <a href={config.baseUrl}>Return to the front page</a>
           </div>
         </div>
       </div>
