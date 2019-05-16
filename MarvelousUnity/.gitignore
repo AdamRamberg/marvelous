@@ -40,5 +40,5 @@ sysinfo.txt
 .vscode
 
 # README.md & package.json - copied from root when publishing to NPM
-*/Assets/Marvelous/package.json
+/Assets/Marvelous/package.json
 /Assets/Marvelous/README.md

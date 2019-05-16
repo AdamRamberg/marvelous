@@ -1,7 +1,7 @@
 {
     "name": "com.mambojambostudios.marvelous",
     "displayName": "Marvelous",
-    "version": "1.0.1",
+    "version": "1.0.2",
     "unity": "2018.1",
     "description": "💄 Utility library and extensions for Unity",
     "scripts": {
