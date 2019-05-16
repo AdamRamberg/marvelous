@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+    <id>https://AdamRamberg.github.io/marvelous/blog</id>
+    <title>Marvelous Blog</title>
+    <updated>2019-05-16T06:00:00Z</updated>
+    <generator>Feed for Node.js</generator>
+    <link rel="alternate" href="https://AdamRamberg.github.io/marvelous/blog"/>
+    <subtitle>The best place to stay up-to-date with the latest Marvelous news and events.</subtitle>
+    <logo>https://AdamRamberg.github.io/marvelous/img/favicon.ico</logo>
+    <rights>Copyright © 2019 Adam Ramberg</rights>
+    <entry>
+        <title type="html"><![CDATA[Let there be light!]]></title>
+        <id>https://AdamRamberg.github.io/marvelous/blog/2019/05/16/first-post.html</id>
+        <link href="https://AdamRamberg.github.io/marvelous/blog/2019/05/16/first-post.html">
+        </link>
+        <updated>2019-05-16T06:00:00Z</updated>
+        <summary type="html"><![CDATA[<p>The documentation site is up and running! The blog for Marvelous will not be here, but could instead be found <a href="https://medium.com/@adamramberg">here</a>.</p> ]]></summary>
+        <author>
+            <name>Adam Ramberg</name>
+            <uri>http://twitter.com/adamramberg1</uri>
+        </author>
+    </entry>
+</feed>

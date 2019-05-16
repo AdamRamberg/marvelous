@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rss version="2.0">
+    <channel>
+        <title>Marvelous Blog</title>
+        <link>https://AdamRamberg.github.io/marvelous/blog</link>
+        <description>The best place to stay up-to-date with the latest Marvelous news and events.</description>
+        <lastBuildDate>Thu, 16 May 2019 06:00:00 GMT</lastBuildDate>
+        <docs>http://blogs.law.harvard.edu/tech/rss</docs>
+        <generator>Feed for Node.js</generator>
+        <image>
+            <title>Marvelous Blog</title>
+            <url>https://AdamRamberg.github.io/marvelous/img/favicon.ico</url>
+            <link>https://AdamRamberg.github.io/marvelous/blog</link>
+        </image>
+        <copyright>Copyright © 2019 Adam Ramberg</copyright>
+        <item>
+            <title><![CDATA[Let there be light!]]></title>
+            <link>https://AdamRamberg.github.io/marvelous/blog/2019/05/16/first-post.html</link>
+            <guid>https://AdamRamberg.github.io/marvelous/blog/2019/05/16/first-post.html</guid>
+            <pubDate>Thu, 16 May 2019 06:00:00 GMT</pubDate>
+            <description><![CDATA[<p>The documentation site is up and running! The blog for Marvelous will not be here, but could instead be found <a href="https://medium.com/@adamramberg">here</a>.</p> ]]></description>
+        </item>
+    </channel>
+</rss>
