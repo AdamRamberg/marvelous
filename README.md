@@ -19,7 +19,7 @@ Marvelous can be installed via NPM. Add the following to your `manifest.json`:
     ],
     "dependencies": {
         ...
-        "com.mambojambostudios.marvelous" : "1.0.6",
+        "com.mambojambostudios.marvelous" : "1.0.7",
         ...
     }
 }
