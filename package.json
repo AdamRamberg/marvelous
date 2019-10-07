@@ -1,8 +1,6 @@
 {
   "scripts": {
-    "publish:pkg": "npm publish ./Marvelous",
-    "prepublish:pkg": "copyfiles README.md ./Marvelous",
-    "postpublish:pkg": "rimraf ./Marvelous/README.md ./Marvelous/README.md.meta"
+    "publish:pkg": "npm publish ./Marvelous"
   },
   "devDependencies": {
     "copyfiles": "^2.1.0",
