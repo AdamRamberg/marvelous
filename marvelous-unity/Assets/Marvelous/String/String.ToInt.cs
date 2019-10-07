@@ -10,7 +10,7 @@ namespace Marvelous
         /// <param name="str">The string to convert.</param>
         /// <param name="def">The default value returned if it not possible to convert the string.</param>
         /// <returns>The string converted as an integer.</returns>
-        public int ToInt(string str, int def = 0)
+        public static int ToInt(string str, int def = 0)
         {
             int num;
             return int.TryParse(str, out num) ? num : def;
